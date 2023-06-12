@@ -25,6 +25,7 @@
     <li>Open the index.html file in a web browser.</li>
 </ol>
 
+<p>Alternatively, users can navigate to https://jimmyjr77.github.io/JavaScript-Quiz/ in their browser to take the quiz. <br>
 <h2>Usage</h2>
 
 <p>Upon opening the Coding Quiz in a web browser, users will see the main page with a "Start" button. Clicking the "Start" button initiates the quiz and starts the timer. Users are then presented with a series of multiple-choice questions, one at a time. Select an answer by clicking on the corresponding option.</p>

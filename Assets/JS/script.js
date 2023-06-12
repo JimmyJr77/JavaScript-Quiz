@@ -200,7 +200,7 @@ function updateHighscores() {
  // Go back to previous section from "View Highscores"
  goBackEl.addEventListener("click", function() {
     if (sectionDisplayStates.questionsEl === "flex") {
-        questionsEl.style.display = "flex"
+        questionsEl.style.display = "flex";
         startEl.style.display = "none";
         doneEl.style.display = "none";
         highscoresEl.style.display = "none";
@@ -215,7 +215,7 @@ function updateHighscores() {
         doneEl.style.display = "none";
         highscoresEl.style.display = "none";
     }
-   });
+});
 
 // Clear Highscores button
 clearEl.addEventListener("click", function() {
@@ -228,7 +228,8 @@ clearEl.addEventListener("click", function() {
 
 // Activate save score button functionality
 
-saveScoreEl.addEventListener("click", saveScore)
+// Activate save score button functionality
+saveScoreEl.addEventListener("click", saveScore);
 
 // Log scores function
 function saveScore(event) {
@@ -239,32 +240,37 @@ function saveScore(event) {
 
     // Validate initials input
     if (initials === "") {
-       initials = "UNK"
+        initials = "UNK";
     }
-
-    viewHighscores();
 
     // Save initials and score to local storage
     localStorage.setItem(initials, score);
+
+    viewHighscores();
+
 }
 
-// // Restart Game
-// playAgainEl.addEventListener("click", playAgain)
+// Restart Game
+playAgainEl.addEventListener("click", playAgain)
 
-// function playAgain() {
-//     // Reseting all score and question/answer variables
-//     countdownTime = 60;
-//     score = 0; 
-//     currentQuestionIndex = 0;
-//     selectedAnswers = []; 
+function playAgain() {
+    location.reload();
+}
 
-//     // Reset timer interval and update countdown immediately
-//     clearInterval(timerInterval);
-//     countdownSpanEl.textContent = countdownTime;
 
-//     // Go back to start screen
-//     questionsEl.style.display = "none";
-//     startEl.style.display = "flex";
-//     doneEl.style.display = "none";
-//     highscoresEl.style.display = "none";
-// }
+// I tried using the below code to reset the timer and variables, but the timer kept getting messed up. I'm not sure why.
+    // // Reseting all score and question/answer variables
+    // countdownTime = 60;
+    // score = 0; 
+    // currentQuestionIndex = 0;
+    // selectedAnswers = []; 
+
+    // // Reset timer interval and update countdown immediately
+    // clearInterval(timerInterval);
+    // countdownSpanEl.textContent = countdownTime;
+
+    // // Go back to start screen
+    // questionsEl.style.display = "none";
+    // startEl.style.display = "flex";
+    // doneEl.style.display = "none";
+    // highscoresEl.style.display = "none";

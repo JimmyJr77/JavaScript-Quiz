@@ -5,16 +5,21 @@
 #container {
     height: 100vh;
     width:auto;
-  }
+    background-image: url("/Assets/Images/class.jpg");
+    background-size: 100vw; /* Adjust the background size as needed */
+    background-position: center; /* Adjust the background position as needed */
+    background-repeat: no-repeat;
+}
 
 header {
     display:flex;
+    position:relative;
     justify-content: space-between;
     background-color: purple;
     color:white;
     font-weight:900;
     padding:5px;
-    z-index:1
+    z-index:1;
 }
 
 #view-highscores {
@@ -56,18 +61,18 @@ main {
 
 #start-challenge {
     display: flex;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    position: relative;
+    margin: 0 auto 0 auto ;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
     z-index:1;
 }
 
 #start-challenge h1 {
-    display:flex;
-    margin: 0 auto;
+    display: flex;
+    position: relative;
+    margin: 10% auto 0 auto;
+    flex-direction: column;
     text-align: center;
     font-size: xx-large;
 }
@@ -94,12 +99,11 @@ button:hover {
         
 #questions {
     display: none;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    position: relative;
+    margin: 10% auto 0 auto;
+    width:60%;
     flex-direction: column;
-    width: 40%;
+    text-align: left;
     z-index:1;
 }
 
@@ -128,18 +132,17 @@ button:hover {
 }
 
 #instant-grading {
-    color:rgb(164, 164, 164)
+    color: green;
 }
 
 
 #all-done {
     display: none;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    position: relative;
+    margin: 10% auto 0 auto;
+    width:60%;
     flex-direction: column;
-    width: 40%;
+    text-align: left;
     z-index:1;
 }
 
@@ -157,13 +160,11 @@ form input {
 
 #highscores {
     display: none;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    position: relative;
+    margin: 10% auto 0 auto;
+    width:60%;
     flex-direction: column;
-    width: 40%;
-    justify-content: flex-end;
+    text-align: left;
     z-index:1;
 }
 
@@ -179,6 +180,7 @@ form input {
     color:black;
     padding:0 5px;
     border-radius: 3px;
+    margin:4px;
 }
 
 #highscores div {
@@ -193,49 +195,3 @@ form input {
     padding: 5px
 }
 
-#students {
-    position:fixed;
-    left:50%;
-    transform:translate(-50%);
-    bottom:0;
-    z-index:0
-}
-
-@media screen and (max-height: 662px) {
-    #students {
-        opacity: .3;
-    }
-
-    #start-challenge {
-        display: flex;
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform:translate(-50%, 0);
-        flex-direction: column;
-        width: 40%;
-        z-index:1;
-    }
-
-    #all-done {
-        display: none;
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform:translate(-50%, 0);
-        flex-direction: column;
-        width: 40%;
-        z-index:1;
-    }
-
-    #questions {
-        display: none;
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform:translate(-50%, 0);
-        flex-direction: column;
-        width: 40%;
-        z-index:1;
-    }
-}

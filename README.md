@@ -1,4 +1,4 @@
-<h1>Coding Quiz</h1>
+<h1>JavaScript Quiz</h1>
 
 <h2>Description</h2>
 

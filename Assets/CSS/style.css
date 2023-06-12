@@ -13,12 +13,14 @@ header {
     background-color: purple;
     color:white;
     font-weight:900;
-    padding:5px
+    padding:5px;
+    z-index:1
 }
 
 #view-highscores {
     margin-left:10px;
     cursor:pointer;
+    z-index: 2;
 }
 
 #view-highscores:hover {
@@ -32,6 +34,7 @@ header {
 #play-again {
     margin-left:10px;
     cursor:pointer;
+    z-index: 2;
 }
 
 #play-again:hover {
@@ -44,6 +47,7 @@ header {
 
 #timer {
     margin-right:10px;
+    z-index: 2;
 }
 
 main {
@@ -195,4 +199,43 @@ form input {
     transform:translate(-50%);
     bottom:0;
     z-index:0
+}
+
+@media screen and (max-height: 662px) {
+    #students {
+        opacity: .3;
+    }
+
+    #start-challenge {
+        display: flex;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform:translate(-50%, 0);
+        flex-direction: column;
+        width: 40%;
+        z-index:1;
+    }
+
+    #all-done {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform:translate(-50%, 0);
+        flex-direction: column;
+        width: 40%;
+        z-index:1;
+    }
+
+    #questions {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform:translate(-50%, 0);
+        flex-direction: column;
+        width: 40%;
+        z-index:1;
+    }
 }

@@ -29,6 +29,46 @@ var score;
 var highscores;
 var sectionDisplayStates;
 
+// Wrong answer responses
+var wrongResponses = [
+    "Nice try, but nope!",
+    "Epic fail, my friend.",
+    "Seriously? Not even close.",
+    "Swing and a miss!",
+    "That's just plain wrong.",
+    "Oops, better luck next time.",
+    "Are you even trying?!",
+    "Um, nope. Try again.",
+    "Well, that was embarrassing.",
+    "Wrong answer, genius. Try harder."
+  ];
+  
+  // Right answer responses
+  var rightResponses = [
+    "Oh, you're a genius.",
+    "Wow, you must be psychic.",
+    "Congratulations, you must be cheating.",
+    "Impressive, but are you sure?",
+    "Sure, you magically got it.",
+    "Right again, suspiciously accurate.",
+    "Okay, I believe you... not.",
+    "How did you guess that? Suspicious.",
+    "Oh, you must have insider information.",
+    "Correct, but I have my doubts."
+  ];
+  
+  // Function for a random wrong answer response
+  function wrongResponse() {
+    var randomIndex = Math.floor(Math.random() * wrongResponses.length);
+    return wrongResponses[randomIndex];
+  }
+  
+  // Function for a random right answer response
+  function rightResponse() {
+    var randomIndex = Math.floor(Math.random() * rightResponses.length);
+    return rightResponses[randomIndex];
+  }
+  
 // Initialize variables
 score = 0; // Record the score
 currentQuestionIndex = 0; // Record which question is being cybcled through
@@ -102,10 +142,10 @@ function startGame() {
 
         //Give instant grade response and score answers
         if (isCorrect) {
-            instaGradeEl.textContent = "I think you cheated!";
+            instaGradeEl.textContent = rightResponse();
             score++
             } else {
-            instaGradeEl.textContent = "Not even close!";
+            instaGradeEl.textContent = wrongResponse();
             countdownTime -=10;
             }
 

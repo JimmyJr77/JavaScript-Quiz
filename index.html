@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Assets/CSS/style.css">
+    <title>Coding Quiz</title>
+</head>
+
+<body id="container">
+    <header>
+        <div id="view-highscores">
+            View Highscores 
+        </div>
+        <div id="play-again">
+            Play Again
+        </div>
+        <div id="timer">
+            Timer: <span></span>
+        </div>
+    </header>
+
+    <main>    
+        <section id="start-challenge"><h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+            <button>Start Quiz</button>
+        </section>
+     
+        <section id="questions">
+            <h2></h2>
+            <ul>
+                <li>1. <span></span></li>
+                <li>2. <span></span></li>
+                <li>3. <span></span></li>
+                <li>4. <span></span></li>
+            </ul>
+            <div>
+                <hr>
+            </div>
+            <div id="instant-grading"></div>
+        </section>
+
+        <section id="all-done">
+            <h2>All Done!</h2>
+            <div id="final-score">
+                Your final score is <span></span>.
+            </div>
+            <br>
+            <form>Enter initials:
+                <input style="width:25px" id="initials" type="text" name="initials" placeholder="ABC">
+                <button style="margin-right:7px;">Submit</button>
+                <br>
+                <p style="color:red">WARNING: This WILL go down on your permanent record!</p>
+            </form>
+        </section>
+
+        <section id="highscores"><h2>Highscores</h2>
+            <ul id="highscores-list">
+                <li></li>
+            </ul>
+            <div>
+                <button id="go-back">Go Back</button>
+                <button id="clear">Clear Highscores</button>
+            </div>
+        </section>
+
+        <image>
+            <img id="students"src="./Assets/Images/class.jpg" alt="students over various translucent colors raising their hands">
+        </image>
+
+    </main>
+
+
+
+    <script src="./Assets/JS/script.js"></script>
+    <script src="./Assets/JS/questions.js"></script>
+</body>
+</html>
